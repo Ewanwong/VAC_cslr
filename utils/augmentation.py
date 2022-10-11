@@ -92,7 +92,7 @@ class Compose(object):
         one_hot_labels = []
         for gloss in label:
             one_hot_label = torch.zeros((num_classes,))
-            one_hot_label[gloss - 1] = 1.0
+            one_hot_label[gloss] = 1.0
             one_hot_labels.append(one_hot_label)
         return image, torch.stack(one_hot_labels, dim=0)
 
